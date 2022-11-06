@@ -1,1 +1,7 @@
 build/
+
+*.elf
+*.3dsx
+*.lst
+*.smdh
+*.lst

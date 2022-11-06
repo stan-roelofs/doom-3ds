@@ -21,7 +21,7 @@
 
 // Enables wad merging (the '-merge' command line parameter)
 
-#define FEATURE_WAD_MERGE 1
+// #define FEATURE_WAD_MERGE 1
 
 // Enables dehacked support ('-deh')
 
@@ -29,12 +29,10 @@
 
 // Enables multiplayer support (network games)
 
-#define FEATURE_MULTIPLAYER 1
+// #define FEATURE_MULTIPLAYER 1
 
 // Enables sound output
 
-#define FEATURE_SOUND 1
+// #define FEATURE_SOUND 1
 
 #endif /* #ifndef DOOM_FEATURES_H */
-
-
