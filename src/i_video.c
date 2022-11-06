@@ -1767,6 +1767,10 @@ static void SetVideoMode(screen_mode_t *mode, int w, int h)
 #endif
     }
 
+#ifdef __3DS__
+    flags = SDL_TOPSCR | SDL_CONSOLEBOTTOM | SDL_FITHEIGHT | SDL_FITWIDTH;
+#endif
+
     screen = SDL_SetVideoMode(w, h, screen_bpp, flags);
 
     if (screen == NULL)

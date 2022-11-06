@@ -1094,11 +1094,19 @@ static boolean I_SDL_InitSound(boolean _use_sfx_prefix)
 
     if (SDL_Init(SDL_INIT_AUDIO) < 0)
     {
-        fprintf(stderr, "Unable to set up sound.\n");
+        fprintf(stderr, "Unable to set up sound. %s\n", SDL_GetError());
         return false;
     }
 
-    if (Mix_OpenAudio(snd_samplerate, AUDIO_S16SYS, 2, GetSliceSize()) < 0)
+    int nr_channels =
+#if __3DS__
+    1
+#else
+    2
+#endif
+    ;
+
+    if (Mix_OpenAudio(snd_samplerate, AUDIO_S16SYS, nr_channels, GetSliceSize()) < 0)
     {
         fprintf(stderr, "Error initialising SDL_mixer: %s\n", Mix_GetError());
         return false;
