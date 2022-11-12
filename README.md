@@ -1,3 +1,3 @@
-# template
+# doom3ds
 
-This is a template for starting new 3DS libctru projects.
+This is a port of [chocolate doom](https://github.com/chocolate-doom/chocolate-doom) for the Nintendo 3DS. 
